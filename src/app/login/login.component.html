@@ -1,0 +1,47 @@
+<html>
+<body>
+    <div class="container"></div>
+<div class="login-page" routerLink="/home" >
+    <span></span>
+    <div class="form">
+        <a >
+            <img src="https://kcbgroup.com/wp-content/themes/group/img/logo.svg" width="100%" height="60" alt="2">
+          </a>
+         <form class="login-form" #loginform ="ngForm" (ngSubmit)="loginUser()">
+        <p class="has-text-danger" >{{msg}}</p>
+    
+        <input type="text" class="form-control" placeholder="Staff Number" name="staffNumber" [(ngModel)]="user.staffNumber" required #staffNumber="ngModel"
+        [class.is-invalid]="staffNumber.invalid && staffNumber.touched"
+        />
+        <!-- <small class="text-danger" [class.d-none]="staffNumber.invalid || staffNumber.touched">Staff Number is Required</small> -->
+        <div *ngIf="staffNumber.errors && (staffNumber.invalid && staffNumber.touched)">
+          <div class="alert alert-danger" role="alert" *ngIf="staffNumber.invalid">Staff Number is a Required Field</div>
+          <small class="alert alert-danger"*ngIf="staffNumber.touched"> Enter Valid Staff Number</small>
+        </div>
+
+        <input type="password" class="form-group" placeholder="Password" name="password" [(ngModel)]="user.password" required #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
+        />
+        <div *ngIf="password.errors && (password.invalid && password.touched)">
+          <small class="text-danger"*ngIf="password.touched">Password is a Required Field</small>
+        </div>
+        <input type="email" class="form-comtrol" placeholder="Email" name="email" [(ngModel)]="user.email" required #email="ngModel" required pattern="[^]+@[^]+[.][a-z]{2,63}$" autocomplete="email" ngModel [email]="true"
+        [class.is-invalid]="email.invalid && email.touched"
+        />
+        <div class="has-text-danger" *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="has-text-danger"*ngIf="email.touched">Email Address is a Required Field</small>
+          <small class="has-text-danger"*ngIf="email.invalid"> Enter Valid Staff Email Address</small>
+        </div> 
+        <button [disabled]="loginform.invalid">login</button>
+        <p class="message">Not registered?    <a href="#" (click)="gotoregistration()">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+            <div><p class="copyright">KCB Bank © 2022</p></div>       
+</footer>
+</body>
+</html>
+

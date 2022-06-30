@@ -1,0 +1,27 @@
+.mat-toolbar{
+    background-color: black; 
+}
+.mat-toolbar a{
+    color: white;
+}
+.spec{
+    flex: 1 1 auto;
+}
+.navbar{
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 60s infinite ease-in-out;
+}
+@media (max-width: 600px) {
+    .navbar{
+      max-width: 100%;
+    }
+    .spec{
+        width: 100%;
+    }
+}

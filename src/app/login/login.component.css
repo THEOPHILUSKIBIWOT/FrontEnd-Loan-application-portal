@@ -1,0 +1,119 @@
+
+html{
+    background-image: url(/assets/images/wallpaper-nature-4k-1680x1050.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 60s infinite ease-in-out;
+}
+.login-page{
+  width: 400px;
+  padding: 5% 0 0;
+  margin: 3%;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #82ba41;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #002c4d;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 20px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #000000;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #000000;
+  font-size: 12px;
+}
+.form .message a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+@keyframes change{
+    0%
+    {
+        background-image: url(/assets/images/Happy-Staff.jpg);
+    }
+    20%
+    {
+        background-image: url(/assets/images/Housing-Loan.jpg);
+    }
+    40%
+    {
+        background-image: url(/assets/images/Green-Plant.jpg);
+    }
+    60%
+    {
+        background-image: url(/assets/images/Mortage-Loan.jpg);
+    }
+    80%
+    {
+        background-image: url(/assets/images/Savings.jpg);
+    }
+    100%
+    {
+        background-image: url(/assets/images/Happy-Staff.jpg);
+    }
+    
+}
+.footer{
+	background-color: #002c4d;
+    padding: 10px 0;
+}
+@media (max-width: 600px) {
+  .container{
+    max-width: 100%;
+  }
+  .login-page{
+    width: 100%;
+  }
+  .form input {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .form{
+    width: 100%;
+  }
+  .form button {
+    width: 100%;
+  }
+  .html{
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from '../login/login.component';
+import { RegistrationComponent } from '../registration/registration.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { LoanApplicationComponent } from '../loan-application/loan-application.component';
+
+const routes: Routes = [
+  {path:'', redirectTo:'home', pathMatch:'full'},
+  {path:'home',component:LoginComponent},
+  {path:'login_page',component:LoginComponent},
+  {path:'Registration_page',component:RegistrationComponent},
+  {path:'dashboard',component:DashboardComponent},
+  {path:'Loan_Application',component:LoanApplicationComponent}
+]
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes),
+  ]
+})
+export class AppRoutingModule { }

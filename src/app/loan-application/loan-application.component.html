@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="container">
+        <header>New Loan Applications</header>
+
+        <form action="#" #userPost="ngForm" (ngSubmit)="loanApplied()">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Loan Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Loan Type</label>
+                            <input type="text" placeholder="Enter the loan type" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Amount applied</label>
+                            <input type="text" placeholder="Enter amount you are applying" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Amount in word</label>
+                            <input type="text" placeholder="Enter Amount in word" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Loan Purpose</label>
+                            <textarea class="textarea" placeholder="e.g. To buy Land"></textarea>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Terms of employment</label>
+                            <select required>
+                                <option disabled selected>Select Employement Term</option>
+                                <option>Permanent</option>
+                                <option>Contract</option>
+                                <option>Not Sure</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>If contract, State expiry Date</label>
+                            <input type="date" placeholder="Enter contract expiry Date" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Outstanding Loans</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Loan Type</label>
+                            <input type="text" placeholder="Enter the Loan Type" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Amount</label>
+                            <input type="number" placeholder="Enter Amount taken" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Loan Purpose</label>
+                            <textarea class="textarea" placeholder="Enter the purpose of applying Loan"></textarea>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Repayment Rate</label>
+                            <input type="text" placeholder="Enter the rate of repayment" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Loan Balance</label>
+                            <input type="text" placeholder="Enter loan balance" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter expiry date" required>
+                        </div>
+
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit Request</button>
+                </div> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

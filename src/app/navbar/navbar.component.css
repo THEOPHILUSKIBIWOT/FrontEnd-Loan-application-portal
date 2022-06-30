@@ -1,0 +1,34 @@
+.mat-toolbar {
+    background-color: #0d2b4e; /* Black background color */
+    position: auto; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+  
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  @media (max-width: 600px){
+    
+    .navbar-brand{
+      max-width: 100%;
+    }
+    #navbar a{
+    max-width: 100%;
+    }
+    .mat-toolbar .span{
+    max-width: 100%;
+    }
+}
