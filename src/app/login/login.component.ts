@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegistrationService } from '../registration.service';
-import { User } from '../user';
+import { User } from '../model/user';
 
 @Component({
   selector: 'app-login',

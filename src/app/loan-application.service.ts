@@ -11,6 +11,6 @@ baseUrl= environment.LoanApplicationBaseUrl
   constructor(private http : HttpClient) { }
 
   public applyLoan(Staff: any): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}customer/add`,Staff)
+    return this.http.post<any>(`${this.baseUrl}loanapplication/add`,Staff)
 }
 }

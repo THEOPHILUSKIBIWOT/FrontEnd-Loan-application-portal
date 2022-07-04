@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-    <div class="container">
+    <div class="container" [hidden] ="submitted">
         <header>New Loan Applications</header>
 
         <form action="#" #userPost="ngForm" (ngSubmit)="loanApplied()">
@@ -14,27 +14,27 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Loan Type</label>
-                            <input type="text" placeholder="Enter the loan type" required>
+                            <input type="text" name="loanType" placeholder="Enter the loan type" required [(ngModel)]="loanapplication.loanType">
                         </div>
 
                         <div class="input-field">
                             <label>Amount applied</label>
-                            <input type="text" placeholder="Enter amount you are applying" required>
+                            <input type="text" name="amountApplied"placeholder="Enter amount you are applying" required [(ngModel)]="loanapplication.amountApplied">
                         </div>
 
                         <div class="input-field">
                             <label>Amount in word</label>
-                            <input type="text" placeholder="Enter Amount in word" required>
+                            <input type="text" name="amountInWords"placeholder="Enter Amount in word" required [(ngModel)]="loanapplication.amountInWords">
                         </div>
 
                         <div class="input-field">
                             <label>Loan Purpose</label>
-                            <textarea class="textarea" placeholder="e.g. To buy Land"></textarea>
+                            <textarea class="textarea" name="loanPurpose"placeholder="e.g. To buy Land" [(ngModel)]="loanapplication.loanPurpose"></textarea>
                         </div>
 
                         <div class="input-field">
                             <label>Terms of employment</label>
-                            <select required>
+                            <select required name="contract" [(ngModel)]="loanapplication.contract">
                                 <option disabled selected>Select Employement Term</option>
                                 <option>Permanent</option>
                                 <option>Contract</option>
@@ -44,7 +44,7 @@
 
                         <div class="input-field">
                             <label>If contract, State expiry Date</label>
-                            <input type="date" placeholder="Enter contract expiry Date" required>
+                            <input type="date" name="expiryDate"placeholder="Enter contract expiry Date" required>
                         </div>
                     </div>
                 </div>
@@ -54,8 +54,12 @@
 
                     <div class="fields">
                         <div class="input-field">
+                            <label>Staff Number</label>
+                            <input type="text" name="loanType"placeholder="Enter the Loan Type" required >
+                        </div>
+                        <div class="input-field">
                             <label>Loan Type</label>
-                            <input type="text" placeholder="Enter the Loan Type" required>
+                            <input type="text" name="loanType"placeholder="Enter the Loan Type" required >
                         </div>
 
                         <div class="input-field">

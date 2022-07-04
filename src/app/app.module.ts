@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoanApplicationComponent } from './loan-application/loan-application.component';
+import { LoanStatusComponent } from './loan-status/loan-status.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { LoanApplicationComponent } from './loan-application/loan-application.co
     LoginComponent,
     NavbarComponent,
     DashboardComponent,
-    LoanApplicationComponent
+    LoanApplicationComponent,
+    LoanStatusComponent
   ],
   imports: [
     BrowserModule,
