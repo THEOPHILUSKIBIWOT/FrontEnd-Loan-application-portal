@@ -1,0 +1,29 @@
+
+<div ng f style="overflow-x:auto;">
+    <div class="mt-2"> </div>
+        <title>LOAN APPLICATION STATUS</title>
+        <table class="table align-middle mb-0 bg-white">
+          <thead class="bg-light" class="table align-middle mb-0 bg-white">
+            <tr>
+              <th>LOAN TYPE</th>
+              <th>AMOUNT IN WORD</th>
+              <th>LOAN PURPOSE</th>
+              <th>EMPLOYEMENT CONTRACT</th>
+              <th>APPLICATION STATUS</th>
+              <th>STATUS</th>
+              <th scope="col" colspan="2">Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let loanapplication of loanapplication">
+                <th scope="row" >{{ loanapplication.status}}</th>
+                    <!-- <td>{{customer.id}}.</td> -->
+                    <td>{{ loanapplication.loanType}}.</td>
+                    <td>{{ loanapplication.amountApplied}.</td>
+                    <td>{{ loanapplication.loanPurpose}}.</td>
+                    <td>{{ loanapplication.contract}}.</td>
+                    <td>{{ loanapplication.status}}.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
